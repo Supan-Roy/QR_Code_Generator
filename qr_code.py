@@ -1,10 +1,7 @@
 import qrcode
-import re
 from datetime import datetime
 
 data = input("Enter Text: ")
-
-safe_data = re.sub(r'\W+', '_', data[:10])
 
 current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
 filename = f"qr_{current_time}.png"
